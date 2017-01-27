@@ -1,4 +1,5 @@
 (defun c:sphereuv ()
+  ;;example 32 divisions should not be less than probably 8 divisions
   (setq divisions (getint "number of divisions, mod2 = 0::"))
   (setq parallels divisions)
   (setq meridians divisions)
@@ -45,7 +46,7 @@
   (setq p 0)
   (setq m 0)
   (repeat parallels
-           
+    Â Â Â Â Â Â Â 
     (setq parallel (/ (* PI p) parallels))
 
     (repeat meridians
@@ -55,7 +56,7 @@
       (setq spherepoints (append spherepoints (list point)))
       (setq m (+ m 1))
     )
-          
+    Â Â Â Â Â Â 
     (setq p (+ p 1))
   )
 
